@@ -9,11 +9,23 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/acc.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <section id="up" class="promo">
         <div class="container">
+            <div class="menu" id="menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+                <ul class="menu-list">
+                    <li><a href="#" class="menu-item">Главная</a></li>
+                    <li><a href="#" class="menu-item">О нас</a></li>
+                    <li><a href="#" class="menu-item">Команда</a></li>
+                    <li><a href="#" class="menu-item">Контакты</a></li>
+                </ul>
+            </div>
             <header class="header">
                 <a href="#" class="header__logo">
                     <img src="icons/logo.png" alt="logo">
@@ -95,6 +107,25 @@
                         <a href="#">I LOVE RUNNING.</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion-block">
+        <div class="container">
+            <button class="accordion">Делимся опытом</button>
+            <div class="panel">
+            <p>Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</p>
+            </div>
+
+            <button class="accordion">Заботимся о здоровье</button>
+            <div class="panel">
+            <p>Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</p>
+            </div>
+
+            <button class="accordion">Учим бегать</button>
+            <div class="panel">
+            <p>Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - I LOVE RUNNING.</p>
             </div>
         </div>
     </section>
