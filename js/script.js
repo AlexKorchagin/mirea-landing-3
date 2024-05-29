@@ -133,3 +133,41 @@ for (i = 0; i < acc.length; i++) {
 
 //burger 
 var acc = document.getElementById("menu");
+
+
+//filter
+
+document.addEventListener('DOMContentLoaded', () => {
+  const selectElement = document.querySelector('.elem_filter_select');
+  const catalogContent = document.querySelector('.catalog__content_active');
+
+  // Store the initial order of items
+  const initialItems = Array.from(catalogContent.querySelectorAll('.catalog-item.filtered_item'));
+
+  selectElement.addEventListener('change', (event) => {
+      if (event.target.value === 'price') {
+          sortItemsByPrice();
+      } else if (event.target.value === '') {
+          resetItems();
+      }
+  });
+
+  function sortItemsByPrice() {
+      const items = Array.from(catalogContent.querySelectorAll('.catalog-item.filtered_item'));
+      items.sort((a, b) => parseInt(a.getAttribute('data-finished')) - parseInt(b.getAttribute('data-finished')));
+
+      // Remove existing items
+      catalogContent.innerHTML = '';
+
+      // Append sorted items
+      items.forEach(item => catalogContent.appendChild(item));
+  }
+
+  function resetItems() {
+      // Clear the current items
+      catalogContent.innerHTML = '';
+
+      // Append items in their original order
+      initialItems.forEach(item => catalogContent.appendChild(item));
+  }
+});

@@ -86,4 +86,7 @@
     .menu {
         display: block;
     }
+    body > section.advantages > div > div > div:nth-child(1){
+        margin-bottom: 30px;
+    }
 }
